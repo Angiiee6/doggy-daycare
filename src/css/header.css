@@ -1,0 +1,52 @@
+:root {
+    --header-height: 200px; /* Definierar en CSS-variabel för headerns höjd */
+}
+
+.header {
+ background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: var(--header-height); /* Använder CSS-variabeln för att sätta höjden */
+    border-bottom: 4px solid #e0e0e0;
+    /* fäster headern i top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;   
+}
+
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 2px 0;
+    
+    
+    
+    /* Modern glas-effekt */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+.nav-links a {
+    color: #000000;
+    font-size: 15px;
+    padding: 2px 8px;
+    border-radius: 5px;
+
+
+}
+
+.nav-links a:hover {
+background: rgba(255, 255, 255, 0.2);
+
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

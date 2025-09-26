@@ -1,0 +1,37 @@
+:root {
+  --header-height: 200px; /* Definierar en CSS-variabel för headerns höjd */
+}
+
+.about-container {
+  max-width: 800px;
+  margin-top: var(--header-height); /* Tar hänsyn till headerns höjd */
+}
+
+.about-container h2 {
+  color: #2c5530;
+  margin-bottom: 1.5rem;
+}
+
+.about-container h3 {
+  color: #4a7c59;
+  margin: 2rem 0 1rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #4a7c59;
+}
+
+.feature-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2c5530;
+}
