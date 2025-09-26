@@ -7,7 +7,7 @@ import '/src/css/about.css';
 const About = () => {
     return (
         <div className="about-container">
-<h2>Hundis - Mer Än Bara ett Hunddagis</h2>
+<h1>Hundis - Mer Än Bara ett Hunddagis</h1>
       
       <p className='description'>På Hundis förstår vi att din hund är en äkta familjemedlem. Därför har vi skapat en modern och trygg mötespluts där skratt, viftande svansar och glada skall är vardagsmat. Vår filosofi är enkel: <strong>En trött hund är en lycklig hund</strong>.</p>
 

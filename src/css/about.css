@@ -1,5 +1,5 @@
 :root {
-  --header-height: 200px; /* Definierar en CSS-variabel för headerns höjd */
+  --header-height: 200px; /* Definierar headerns höjd */
 }
 
 .about-container {
@@ -27,7 +27,7 @@
   padding: 0 10px; /* Lägger till lite padding på sidorna för mindre fönster */
 }
 
-.about-container h2 {
+.about-container h1 {
   color: #4a7c59;
   margin-bottom: 24px; /* Lägger till marginal under h2 */
 }

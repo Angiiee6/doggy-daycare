@@ -1,0 +1,89 @@
+:root {
+    --header-height: 200px; /* Definierar headerns höjd */
+}
+
+.dog-details-container {
+    max-width: 100%; /* Full bredd så bilder fyller upp */
+    margin: 0 auto;
+    margin-top: var(--header-height); /* Tar hänsyn till headerns höjd */
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Inkluderar padding i bredden */
+    width: 100%; /* Full bredd */
+    padding-bottom: 50px; /* Lägger till padding längst ner */
+    padding-top: 50px; /* Lägger till padding överst för att skapa utrymme under headern */
+}
+
+.owner-info {
+    background: #c1ffeb;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #4a7c59; /* Grön vänster kant */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Lägger till marginal under owner-info */
+}
+
+.dog-details-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; /* Lägger till mellanrum mellan kolumnerna */
+    align-items: start;
+    width: 100%;
+}
+
+.dog-image-large {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dog-info-section {
+    background: #f8f9fa;
+    padding: 20px; 
+    border-radius: 10px;
+    border-left: 4px solid #4ecdc4;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dog-info-section h2 {
+    color: #333;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.info-grid {
+    display: grid;
+    gap: 12px; 
+    width: 100%;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0; 
+    border-bottom: 1px solid #e9efec; /* Linje mellan raderna */
+}
+
+.info-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.info-value {
+    color: #333;
+}
+
+.present-true {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.present-false {
+    color: #dc3545;
+    font-weight: bold;
+}

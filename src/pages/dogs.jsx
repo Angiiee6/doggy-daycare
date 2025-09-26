@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '/src/css/dogs.css';
+import { Link } from 'react-router-dom';
 
 const Dogs = () => {
     const [dogs, setDogs] = useState([]);
@@ -17,7 +18,7 @@ const Dogs = () => {
                 const data = await response.json();
                 console.log('API Response:', data);
                 
-                // Anpassa beroende på datastruktur:
+                
                 if (data.record && data.record.dogs) {
                     setDogs(data.record.dogs);
                 } else if (data.record) {
@@ -48,7 +49,7 @@ const Dogs = () => {
             <h1>Våra Hundar</h1>
             <div className="dogs-grid">
                 {dogs.map((dog) => (
-                    <div key={dog.id} className="dog-card">
+                    <div key={dog.chipNumber} className="dog-card">
                         <div className="dog-image-container">
                             <img 
                                 src={dog.img || defaultDogImage}
@@ -64,7 +65,9 @@ const Dogs = () => {
                             <h3>{dog.name}</h3>
                             <p>Ras: {dog.breed}</p>
                             <p>Ålder: {dog.age} år</p>
+                            <Link to={`/dogs/${dog.chipNumber}`}>
                             <button className="details-btn">Se detaljer</button>
+                            </Link>
                         </div>
                     </div>
                 ))}
