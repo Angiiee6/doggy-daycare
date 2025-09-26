@@ -3,7 +3,9 @@
 }
 
 .home-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    
     margin-top: var(--header-height); /* Tar hänsyn till headerns höjd */
+    padding: 20px;
+    text-align: center;
 }
