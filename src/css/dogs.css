@@ -3,9 +3,10 @@
 }
 
 .dogs-container {
-    max-width: 1200px;
+    max-width: 100%; /* Full bredd så bilder fyller upp */
     margin: 0 auto;
     margin-top: var(--header-height); /* Tar hänsyn till headerns höjd */
+    margin-inline: 20px; /* Lägger till marginal på sidorna */
 }
 
 .dogs-container h1 {
@@ -15,28 +16,29 @@
 }
 
 .dogs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Responsiv grid med minsta kolumnbredd på 250px */
+  gap: 24px; /* Lägger till mellanrum mellan rutorna */
+  margin-top: 24px; /* Lägger till marginal ovanför grid */
+  width: 100%;
 }
 
 .dog-card {
     background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px; 
+    padding: 15px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
     height: 100%;
 }
 
 .dog-image-container {
     width: 100%;
     aspect-ratio: 1 / 1; /* Kvadrat */
-    overflow: hidden;
-    border-radius: 8px;
+    overflow: hidden; /* Förhindrar att bilden sticker utanför behållaren */
+    border-radius: 8px; 
     margin-bottom: 15px;
 }
 
@@ -64,7 +66,7 @@
 }
 
 .details-btn {
-    background-color: #252425;
+    background-color: #302f30;
     color: white;
     border: none;
     padding: 10px 20px;
