@@ -17,7 +17,6 @@ const Home = () => {
                 </p>
                 <p className='description'>Välkommen!</p>
             </div>
-
     );
 };
 

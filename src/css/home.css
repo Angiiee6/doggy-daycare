@@ -1,36 +1,64 @@
 :root {
-    --header-height: 200px; /* Definierar en CSS-variabel för headerns höjd */
+    --header-height: 200px;
 }
 
 .home-container {
-  max-width: 100%; /* Tar upp hela bredden */
-  margin: 0 auto; /* Centrerar containern horizontellt */
-  margin-top: var(--header-height); /* Tar hänsyn till headerns höjd */
-  padding: 0 30px; /* Lägger till lite padding på sidorna */
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: var(--header-height);
+  padding: 0 30px;
   display: flex;
   flex-direction: column; 
-  align-items: center; /* Centrerar texten */
-  box-sizing: border-box; /* Inkluderar padding i bredden */
-  width: 100%; /* Full bredd */
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  
+  /* Bakgrundsbild */
+  background-image: url('/src/assets/images/homepage-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Behåller bilden på plats vid scroll */
+  
+  /* Höjd och padding */
+  min-height: calc(100vh - var(--header-height));
+  padding: 40px 30px;
+  
+  /* Position relative för att kunna placera overlay korrekt */
+  position: relative;
 }
 
+/* Korrigerad overlay - startar UNDER headern */
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Startar från toppen av home-container, inte hela skärmen */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 0;
+}
+
+/* Säkerställ att texten är ovanför overlay */
+.home-container h1,
+.home-container p.description {
+  position: relative;
+  z-index: 1;
+}
 
 .home-container p.description {
   font-size: 17px;
   line-height: 1.6;
-  color: #333; 
-
-  text-align: center; /* Centrerar texten */
-  max-width: 100%; /* Tar upp hela bredden */
-  width: 100%; /* Full bredd */
-  box-sizing: border-box; /* Inkluderar padding i bredden */
-  padding: 0 10px; /* Lägger till lite padding på sidorna för mindre fönster */
+  color: #333;
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
-
-
-
 .home-container h1 {
-    text-align: center;
+  text-align: center;
   color: #4a7c59;
 }
